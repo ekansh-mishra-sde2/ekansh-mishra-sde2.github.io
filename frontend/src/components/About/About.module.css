@@ -1,0 +1,35 @@
+.section { padding: 7rem 0; }
+
+.grid {
+  display: grid; grid-template-columns: 1fr 1.2fr;
+  gap: 5rem; align-items: start;
+}
+
+.stats {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 1.5rem; margin-top: 2rem;
+}
+
+.statCard {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 12px; padding: 1.5rem;
+  transition: border-color 0.3s, transform 0.3s;
+}
+.statCard:hover { border-color: var(--neon); transform: translateY(-4px); }
+
+.statNum {
+  font-family: var(--font-head); font-size: 2.2rem;
+  font-weight: 800; color: var(--neon); line-height: 1;
+}
+.statLabel { font-size: 0.85rem; color: var(--muted); margin-top: 0.3rem; }
+
+.text p {
+  color: var(--muted); line-height: 1.85;
+  margin-bottom: 1.2rem; font-size: 1.02rem;
+}
+.text p strong { color: var(--text); }
+.highlight { color: var(--neon); font-weight: 600; }
+
+@media (max-width: 900px) {
+  .grid { grid-template-columns: 1fr; gap: 3rem; }
+}

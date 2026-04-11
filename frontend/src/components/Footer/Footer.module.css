@@ -1,0 +1,8 @@
+.footer {
+  border-top: 1px solid var(--border);
+  padding: 2.5rem 0;
+  text-align: center;
+  position: relative; z-index: 2;
+}
+.footer p { color: var(--muted); font-family: var(--font-mono); font-size: 0.8rem; }
+.footer span { color: var(--neon); }

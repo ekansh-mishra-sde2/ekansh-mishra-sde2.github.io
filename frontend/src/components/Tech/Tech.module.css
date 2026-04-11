@@ -1,0 +1,72 @@
+.section { padding: 7rem 0; }
+
+.header { text-align: center; }
+.header p { color: var(--muted); max-width: 500px; margin: 0 auto 1rem; }
+
+.wrap {
+  display: flex; justify-content: center; align-items: center;
+  position: relative; height: 560px; margin: 3rem 0;
+}
+
+.center {
+  position: absolute; z-index: 10;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  width: 110px; height: 110px;
+  background: var(--bg3); border-radius: 50%;
+  border: 2px solid var(--neon);
+  box-shadow: var(--glow);
+}
+.center span {
+  font-family: var(--font-head); font-weight: 800;
+  font-size: 0.75rem; color: var(--neon);
+  letter-spacing: 0.08em; text-align: center;
+}
+
+.ring {
+  position: absolute; border-radius: 50%;
+  border: 1px dashed rgba(0,245,212,0.12);
+  animation: spin linear infinite;
+}
+.ring1 { width: 220px; height: 220px; animation-duration: 18s; }
+.ring2 { width: 340px; height: 340px; animation-duration: 28s; animation-direction: reverse; }
+.ring3 { width: 460px; height: 460px; animation-duration: 38s; }
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+.icon {
+  position: absolute;
+  width: 48px; height: 48px;
+  background: var(--bg3); border-radius: 12px;
+  border: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.5rem;
+  transition: all 0.3s;
+  cursor: none;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+}
+.icon:hover {
+  border-color: var(--neon);
+  box-shadow: var(--glow);
+  transform: scale(1.2) !important;
+  z-index: 20;
+}
+.icon img { width: 28px; height: 28px; object-fit: contain; }
+
+.tooltip {
+  position: absolute; bottom: calc(100% + 8px); left: 50%;
+  transform: translateX(-50%);
+  background: var(--bg3); border: 1px solid var(--border);
+  padding: 0.3rem 0.7rem; border-radius: 6px;
+  font-family: var(--font-mono); font-size: 0.72rem;
+  color: var(--neon); white-space: nowrap;
+  opacity: 0; pointer-events: none; transition: opacity 0.2s;
+}
+.icon:hover .tooltip { opacity: 1; }
+
+@media (max-width: 600px) {
+  .wrap { height: 380px; transform: scale(0.7); }
+}

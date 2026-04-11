@@ -1,0 +1,46 @@
+.section { padding: 7rem 0; overflow: hidden; }
+
+.header { text-align: center; }
+.header p { color: var(--muted); font-size: 0.9rem; margin-top: 0.5rem; }
+
+.trackWrap { position: relative; margin-top: 3rem; }
+.trackWrap::before,
+.trackWrap::after {
+  content: ''; position: absolute; top: 0; bottom: 0; width: 120px; z-index: 3; pointer-events: none;
+}
+.trackWrap::before { left: 0;  background: linear-gradient(to right, var(--bg), transparent); }
+.trackWrap::after  { right: 0; background: linear-gradient(to left,  var(--bg), transparent); }
+
+.track {
+  display: flex; gap: 1.5rem;
+  animation: scrollTrack 40s linear infinite;
+  width: max-content;
+}
+.track:hover { animation-play-state: paused; }
+
+@keyframes scrollTrack {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.card {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 16px; padding: 1.8rem 2rem;
+  width: 360px; flex-shrink: 0;
+  transition: border-color 0.3s;
+}
+.card:hover { border-color: rgba(0,245,212,0.3); }
+
+.quote { font-size: 2rem; color: var(--neon); line-height: 1; margin-bottom: 0.8rem; opacity: 0.5; }
+.text  { color: var(--muted); font-size: 0.93rem; line-height: 1.75; margin-bottom: 1.2rem; }
+
+.author { display: flex; align-items: center; gap: 0.8rem; }
+.avatar {
+  width: 40px; height: 40px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--neon2), var(--neon));
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-head); font-weight: 700; font-size: 0.9rem;
+  color: var(--bg); flex-shrink: 0;
+}
+.name  { font-weight: 600; font-size: 0.9rem; color: var(--text); }
+.title { font-size: 0.78rem; color: var(--muted); font-family: var(--font-mono); }

@@ -1,0 +1,27 @@
+.section { padding: 7rem 0; }
+
+.timeline { position: relative; margin-top: 3rem; padding-left: 2rem; }
+.timeline::before {
+  content: ''; position: absolute; left: 0; top: 0; bottom: 0;
+  width: 1px;
+  background: linear-gradient(to bottom, var(--neon), transparent);
+}
+
+.item { position: relative; margin-bottom: 3rem; padding-left: 2rem; }
+.item::before {
+  content: ''; position: absolute; left: -6px; top: 6px;
+  width: 13px; height: 13px; border-radius: 50%;
+  background: var(--neon); border: 2px solid var(--bg);
+  box-shadow: 0 0 12px var(--neon);
+}
+
+.company { font-family: var(--font-head); font-weight: 700; font-size: 1.2rem; color: var(--text); margin-bottom: 0.2rem; }
+.role    { color: var(--neon); font-size: 0.9rem; font-family: var(--font-mono); }
+.date    { color: var(--muted); font-size: 0.8rem; font-family: var(--font-mono); margin-bottom: 1rem; }
+
+.bullets { list-style: none; }
+.bullets li {
+  color: var(--muted); font-size: 0.95rem; line-height: 1.7;
+  margin-bottom: 0.5rem; padding-left: 1.2rem; position: relative;
+}
+.bullets li::before { content: '▸'; position: absolute; left: 0; color: var(--neon); }
