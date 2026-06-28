@@ -76,18 +76,45 @@ export default function About() {
             </p>
             <p>
               I deeply advocate for <strong>GDPR compliance</strong>, secure
-              coding practices, and AI-augmented development. Currently
-              expanding into{" "}
+              coding practices, and AI-augmented development. I'm now an{" "}
               <span className={styles.highlight}>
-                AWS Cloud & Security engineering
+                AWS Certified Solutions Architect – Associate
               </span>{" "}
-              as my next career chapter.
+              (June 2026), deepening my expertise in cloud architecture and
+              security engineering.
             </p>
             <p>
               Outside of code I contribute to open source, track my learning
               publicly on GitHub, and believe that the best software is built at
               the intersection of engineering craft and genuine curiosity.
             </p>
+
+            <a
+              className={styles.cert}
+              href="https://cp.certmetrics.com/amazon/en/public/verify/credential/32d54564447d41ce8e4c9143ccc115ab"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img
+                className={styles.certBadge}
+                src="https://images.credly.com/size/340x340/images/0e284c3f-5164-4b21-8660-0d84737941bc/image.png"
+                alt="AWS Certified Solutions Architect – Associate badge"
+                loading="lazy"
+                width={84}
+                height={84}
+              />
+              <span className={styles.certInfo}>
+                <span className={styles.certTitle}>
+                  AWS Certified Solutions Architect – Associate
+                </span>
+                <span className={styles.certMeta}>
+                  Issued June 2026 · Amazon Web Services
+                </span>
+                <span className={styles.certVerify}>
+                  Verify credential <i className="fas fa-arrow-up-right-from-square" />
+                </span>
+              </span>
+            </a>
           </div>
         </div>
       </div>

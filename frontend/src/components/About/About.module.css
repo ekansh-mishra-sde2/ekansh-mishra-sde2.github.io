@@ -30,6 +30,26 @@
 .text p strong { color: var(--text); }
 .highlight { color: var(--neon); font-weight: 600; }
 
+.cert {
+  display: flex; align-items: center; gap: 1.25rem;
+  margin-top: 0.5rem; padding: 1.25rem 1.5rem;
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 12px; text-decoration: none;
+  transition: border-color 0.3s, transform 0.3s;
+}
+.cert:hover { border-color: var(--neon); transform: translateY(-4px); }
+.certBadge { width: 84px; height: 84px; flex-shrink: 0; }
+.certInfo { display: flex; flex-direction: column; gap: 0.3rem; }
+.certTitle {
+  font-family: var(--font-head); font-weight: 700;
+  color: var(--text); font-size: 1.02rem; line-height: 1.3;
+}
+.certMeta { font-size: 0.85rem; color: var(--muted); }
+.certVerify {
+  font-size: 0.85rem; color: var(--neon); font-weight: 600;
+  display: inline-flex; align-items: center; gap: 0.4rem;
+}
+
 @media (max-width: 900px) {
   .grid { grid-template-columns: 1fr; gap: 3rem; }
 }
